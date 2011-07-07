@@ -23,12 +23,14 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QGraphicsPixmapItem>
 #include <QMainWindow>
 #include <QDateTime>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <cstring>
+#include <QPixmap>
 
 #define TRB file1<<trBegin->toStdString();
 #define TRM file1<<trMiddle->toStdString();
@@ -52,6 +54,7 @@ public:
 
 public slots:
     void Accept();
+    void imageView();
 
 signals:
 

@@ -3,7 +3,7 @@
   This program is a part of simple Slam Book application written in C++
 
   Copyright (C) 2011   Saurabh Araiyer,  sizzsa(at)gmail(dot)com
-  http://www.decapsulatingabstraction.blogspot.com/
+  http://decapsulatingabstraction.blogspot.com/search/label/slamBook
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -32,6 +32,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(ui->pushButton_3,SIGNAL(clicked()),this,SLOT(close()));
     QObject::connect(ui->actionQuit,SIGNAL(triggered()),this,SLOT(close()));
 
+    //Button Clear_i is present in every tab, listening to shortcut Alt+c to reset all fields in that tab
     QObject::connect(ui->Clear_1,SIGNAL(clicked()),this->ui->lineEdit_1,SLOT(clear()));
     QObject::connect(ui->Clear_1,SIGNAL(clicked()),this->ui->lineEdit_2,SLOT(clear()));
     QObject::connect(ui->Clear_1,SIGNAL(clicked()),this->ui->lineEdit_3,SLOT(clear()));
@@ -56,13 +57,40 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(ui->Clear_4,SIGNAL(clicked()),this->ui->textEdit_12,SLOT(clear()));
     QObject::connect(ui->Clear_4,SIGNAL(clicked()),this->ui->textEdit_13,SLOT(clear()));
 
+    QObject::connect(ui->Clear_5,SIGNAL(clicked()),ui->lineEdit_7,SLOT(clear()));
+    QObject::connect(ui->Clear_5,SIGNAL(clicked()),ui->pushButton_4,SLOT(click()));
+
+
+    //pushButton_2 is connects to above Clear_i buttons
     QObject::connect(ui->pushButton_2,SIGNAL(clicked()),this->ui->Clear_1,SLOT(click()));
     QObject::connect(ui->pushButton_2,SIGNAL(clicked()),this->ui->Clear_2,SLOT(click()));
     QObject::connect(ui->pushButton_2,SIGNAL(clicked()),this->ui->Clear_3,SLOT(click()));
     QObject::connect(ui->pushButton_2,SIGNAL(clicked()),this->ui->Clear_4,SLOT(click()));
 
+    //linking "Submit button" to SLOT Accept()
     QObject::connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(Accept()));
+
+    //Calling imageviewer
+    QObject::connect(ui->pushButton_4,SIGNAL(clicked()),this,SLOT(imageView()));
+    QObject::connect(ui->pushButton,SIGNAL(clicked()),ui->pushButton_4,SLOT(click()));
+    QObject::connect(ui->lineEdit_7,SIGNAL(returnPressed()),ui->pushButton_4,SLOT(click()));
+
+    QObject::connect(ui->lineEdit_1,SIGNAL(returnPressed()),this,SLOT(Accept()));  //done for quick testing of o/p, remove it
+    QObject::connect(ui->lineEdit_1,SIGNAL(textChanged(QString)),ui->lineEdit_1,SLOT(setWindowTitle(QString)));
+
 }
+
+void MainWindow::imageView()
+{
+    QGraphicsScene *scene1 = new QGraphicsScene( ui->graphicsView );
+    scene1->setSceneRect( ui->graphicsView->rect() );
+    ui->graphicsView->setScene(scene1);
+    ui->graphicsView->setFixedSize(300,200);
+    QPixmap pix( ui->lineEdit_7->text() );
+    scene1->addPixmap(pix);
+    ui->label_18->setText(ui->lineEdit_1->text());
+}
+
 void MainWindow::Accept()
 {
     ofstream file1;
@@ -70,20 +98,39 @@ void MainWindow::Accept()
     name+=".html";
     name="./Output/"+name;
     file1.open(name.c_str());
-    QString *Header = new QString("<html><head><title>");
+
+    QString *trBegin = new QString("<tr><td width=25%><i>");
+    QString *trMiddle = new QString("</i></td><td>");
+    QString *trClose = new QString("</td></tr>");
+
+    QString *Header = new QString("<!DOCTYPE html><br><html><head><title>");
     file1<<Header->toStdString();
     file1<<ui->lineEdit_1->text().toStdString();
     QString *Title = new QString(" : Slam Book</title></head><body style=\"margin-top:40px;\"><center>");
     file1<<Title->toStdString();
-    QString *tableInit = new QString("<table border=\"1\" width=600px><tr><td width=20%> Name </td><td>");
-    file1<<tableInit->toStdString();
+
+
+    ////addition July 6, for displaying name and Image
+    QString *pageName = new QString ("<h2><table width=600px style=\"background-color:#eee;font-family:\"Tahoma\"><tr width=\"600px\"><td width=\"60%\">");
+    file1<<pageName->toStdString();
     file1<<ui->lineEdit_1->text().toStdString();
+    TRM;
 
-    QString *trBegin = new QString("<tr><td width=20%>");
-    QString *trMiddle = new QString("</td><td>");
-    QString *trClose = new QString("</td></tr>");
+    QString *tryImage = new QString("<img src=\"");
+    file1<<tryImage->toStdString();
+    file1<<ui->lineEdit_7->text().toStdString();
 
+    tryImage = new QString("\"alt=\"");
+    file1<<tryImage->toStdString();
+    tryImage = new QString("\" align=\"right\" align=\"top\">");
+    file1<<tryImage->toStdString();
     TRE;
+    pageName = new QString ("</table></h2>");
+    file1<<pageName->toStdString();
+    //// upto this, display name and Image
+
+    QString *tableInit = new QString("<table border=\"0\" padding=\"3\" width=600px>");
+    file1<<tableInit->toStdString();
 
     TRB;
     QString *Sex = new QString("Sex");
@@ -135,7 +182,7 @@ void MainWindow::Accept()
     TRE;
 
     TRB;
-    QString *About = new QString("About");
+    QString *About = new QString("Address");
     file1<<About->toStdString();
     TRM;
     file1<<ui->textEdit_1->toPlainText().toStdString();
@@ -191,7 +238,7 @@ void MainWindow::Accept()
     TRE;
 
     TRB;
-    QString *Hobbies = new QString("Hobbies/Interest");
+    QString *Hobbies = new QString("Favourite delicacies");
     file1<<Hobbies->toStdString();
     TRM;
     file1<<ui->textEdit_9->toPlainText().toStdString();
@@ -226,10 +273,9 @@ void MainWindow::Accept()
     file1<<ui->textEdit_13->toPlainText().toStdString();
     TRE;
 
-    QString *Footer = new QString("</center></table><br><br><p style=\"font-size:9px;\"><center>Generated by Slam Book. Copyright Saurabh Araiyer, 2011<br>Disrtibuted under GNU GPLv3+</center></p><br><br></body></html>");
+    QString *Footer = new QString("</center></table> <br> <br><br><center style=\"font-size:smaller;\">Generated by Slam Book. Copyright <a href=\"http://decapsulatingabstraction.blogspot.com/search/label/slamBook\"target=\"_blank\">Saurabh Araiyer</a>, 2011<br>Disrtibuted under GNU GPLv3+</center><br><br></body></html>");
     file1<<Footer->toStdString();
     file1.close();
-//    this->ui->lineEdit_1->clear();
 }
 
 

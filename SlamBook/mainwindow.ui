@@ -36,7 +36,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -52,30 +52,48 @@
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="3" column="0">
+       <item row="1" column="0">
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="0" column="0">
-          <widget class="QLabel" name="DOB">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Name  </string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_1">
+           <property name="maxLength">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0">
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_2">
            <property name="text">
             <string>DOB     </string>
            </property>
           </widget>
          </item>
-         <item row="0" column="4">
-          <widget class="QLabel" name="nick">
-           <property name="text">
-            <string>Nick</string>
+         <item row="0" column="1">
+          <widget class="QDateEdit" name="dateTimeEdit">
+           <property name="maximumSize">
+            <size>
+             <width>106</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="displayFormat">
+            <string>dd/MM/yyyy</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="5">
-          <widget class="QLineEdit" name="lineEdit_2"/>
-         </item>
-         <item row="0" column="1">
-          <widget class="QDateTimeEdit" name="dateTimeEdit"/>
-         </item>
          <item row="0" column="2">
-          <widget class="QLabel" name="sex">
+          <widget class="QLabel" name="label_3">
            <property name="text">
             <string>Sex</string>
            </property>
@@ -83,8 +101,11 @@
          </item>
          <item row="0" column="3">
           <widget class="QComboBox" name="comboBoxSex">
-           <property name="editable">
-            <bool>false</bool>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>9999</height>
+            </size>
            </property>
            <item>
             <property name="text">
@@ -103,10 +124,24 @@
            </item>
           </widget>
          </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Nick</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLineEdit" name="lineEdit_2">
+           <property name="maxLength">
+            <number>40</number>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item row="4" column="0">
-        <layout class="QGridLayout" name="gridLayout_4">
+        <layout class="QGridLayout" name="gridLayout_6">
          <item row="0" column="0">
           <widget class="QLabel" name="label_5">
            <property name="text">
@@ -114,8 +149,21 @@
            </property>
           </widget>
          </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Mobile</string>
+           </property>
+          </widget>
+         </item>
          <item row="0" column="1">
           <widget class="QComboBox" name="comboBox_2">
+           <property name="maximumSize">
+            <size>
+             <width>81</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <item>
             <property name="text">
              <string>Aries</string>
@@ -178,19 +226,6 @@
            </item>
           </widget>
          </item>
-         <item row="0" column="2">
-          <widget class="QLabel" name="mobile">
-           <property name="text">
-            <string>Mobile</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QLineEdit" name="lineEdit_3"/>
-         </item>
-         <item row="0" column="5">
-          <widget class="QLineEdit" name="lineEdit_4"/>
-         </item>
          <item row="0" column="4">
           <widget class="QLabel" name="label_7">
            <property name="text">
@@ -198,68 +233,17 @@
            </property>
           </widget>
          </item>
-        </layout>
-       </item>
-       <item row="6" column="0">
-        <layout class="QGridLayout" name="gridLayout_8">
-         <item row="2" column="0">
-          <spacer name="verticalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
+         <item row="0" column="3">
+          <widget class="QLineEdit" name="lineEdit_3">
+           <property name="maxLength">
+            <number>54</number>
            </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
+          </widget>
          </item>
-         <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_14">
-           <item row="0" column="0">
-            <layout class="QVBoxLayout" name="verticalLayout_11">
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_12">
-               <item>
-                <widget class="QLabel" name="label_18">
-                 <property name="text">
-                  <string>About  </string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="verticalSpacer_7">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </item>
-           <item row="0" column="1">
-            <widget class="QTextEdit" name="textEdit_1"/>
-           </item>
-          </layout>
-         </item>
-         <item row="1" column="0">
-          <widget class="QPushButton" name="Clear_1">
-           <property name="maximumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>&amp;Clear</string>
+         <item row="0" column="5">
+          <widget class="QLineEdit" name="lineEdit_4">
+           <property name="maxLength">
+            <number>30</number>
            </property>
           </widget>
          </item>
@@ -267,41 +251,243 @@
        </item>
        <item row="5" column="0">
         <layout class="QGridLayout" name="gridLayout_7">
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_5"/>
-         </item>
-         <item row="0" column="3">
-          <widget class="QLineEdit" name="lineEdit_6"/>
-         </item>
          <item row="0" column="0">
-          <widget class="QLabel" name="label_13">
+          <widget class="QLabel" name="label_9">
            <property name="text">
             <string>email   </string>
            </property>
           </widget>
          </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_5">
+           <property name="maxLength">
+            <number>54</number>
+           </property>
+          </widget>
+         </item>
          <item row="0" column="2">
-          <widget class="QLabel" name="label_14">
+          <widget class="QLabel" name="label_13">
            <property name="text">
-            <string>Website </string>
+            <string>Website</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLineEdit" name="lineEdit_6">
+           <property name="maxLength">
+            <number>150</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="7" column="0">
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>                 </string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QTextEdit" name="textEdit_1">
+           <property name="tabChangesFocus">
+            <bool>true</bool>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Address&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="overwriteMode">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="9" column="0">
+        <widget class="QPushButton" name="Clear_1">
+         <property name="maximumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&amp;Clear_1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_14">
+         <property name="text">
+          <string>How can I reach you</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>I&amp;mage</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>601</width>
+        <height>573</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0">
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>Image</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_7"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="pushButton_4">
+           <property name="text">
+            <string>A&amp;ttach</string>
            </property>
           </widget>
          </item>
         </layout>
        </item>
        <item row="2" column="0">
-        <layout class="QGridLayout" name="gridLayout_6">
+        <layout class="QGridLayout" name="gridLayout_9">
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_1"/>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="Name">
-           <property name="text">
-            <string>Name  </string>
+          <widget class="QGraphicsView" name="graphicsView">
+           <property name="minimumSize">
+            <size>
+             <width>250</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>300</width>
+             <height>200</height>
+            </size>
            </property>
           </widget>
          </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_16">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Image </string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
         </layout>
+       </item>
+       <item row="4" column="0">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="Clear_5">
+         <property name="maximumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&amp;Clear</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -314,21 +500,32 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>0</y>
+        <y>10</y>
         <width>601</width>
-        <height>451</height>
+        <height>441</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
         <widget class="QLabel" name="label_8">
          <property name="text">
-          <string>You are crazy about (like your date)</string>
+          <string>You are crazy about </string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_2"/>
+        <widget class="QTextEdit" name="textEdit_2">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Hobbies / Interests  &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_10">
@@ -338,7 +535,18 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_3"/>
+        <widget class="QTextEdit" name="textEdit_3">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;skeptical, aethist or a believer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_11">
@@ -348,7 +556,18 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_4"/>
+        <widget class="QTextEdit" name="textEdit_4">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;like your first day in school, or a surprise birthday party&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_12">
@@ -358,7 +577,18 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_5"/>
+        <widget class="QTextEdit" name="textEdit_5">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;your dark secret&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="Clear_2">
@@ -411,7 +641,18 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_6"/>
+        <widget class="QTextEdit" name="textEdit_6">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;fiction, action, which typr of movie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_20">
@@ -421,7 +662,18 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_7"/>
+        <widget class="QTextEdit" name="textEdit_7">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;genre, artist, particular song&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_21">
@@ -431,17 +683,39 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_8"/>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_22">
-         <property name="text">
-          <string>Hobbies / Interests</string>
+        <widget class="QTextEdit" name="textEdit_8">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;except course books :P&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_9"/>
+        <widget class="QLabel" name="label_22">
+         <property name="text">
+          <string>Favourite delicacies</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit_9">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;yummmm......&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <spacer name="verticalSpacer_9">
@@ -500,7 +774,18 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_10"/>
+        <widget class="QTextEdit" name="textEdit_10">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;a friend, a foe, what you take me as&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_24">
@@ -510,17 +795,39 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_11"/>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_25">
-         <property name="text">
-          <string>You hate me for, common, I can't be perfect</string>
+        <widget class="QTextEdit" name="textEdit_11">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;maybe your birthday bash ;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_12"/>
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>You hate me for</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit_12">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;come on, I can't be perfect&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_26">
@@ -530,7 +837,18 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit_13"/>
+        <widget class="QTextEdit" name="textEdit_13">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;feel free...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <spacer name="verticalSpacer_10">
@@ -832,6 +1150,9 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Courier New,courier'; font-size:9pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-size:9pt;&quot;&gt;    Copyright (C) 2011   Saurabh Araiyer,  sizzsa(at)gmail(dot)com&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-size:9pt;&quot;&gt;    http://decapsulatingabstraction.blogspot.com/&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Courier New,courier'; font-size:9pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-size:9pt;&quot;&gt;    Thanks to Rolie Mishra, Srishti Gupta and Aishwarya Krishna&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-size:9pt;&quot;&gt;    for letting me know what should be present in this app&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-size:9pt;&quot;&gt;    &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-size:9pt;&quot;&gt;    This program is free software: you can redistribute it and/or modify&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-size:9pt;&quot;&gt;    it under the terms of the GNU General Public License as published by&lt;/span&gt;&lt;/p&gt;
