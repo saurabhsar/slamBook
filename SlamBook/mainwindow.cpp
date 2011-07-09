@@ -29,8 +29,16 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QObject::connect(ui->pushButton_3,SIGNAL(clicked()),this,SLOT(close()));
-    QObject::connect(ui->actionQuit,SIGNAL(triggered()),this,SLOT(close()));
+    QObject::connect(ui->pushButton_3,SIGNAL(clicked()),this,SLOT(close())); //Quit using a button
+    QObject::connect(ui->actionQuit,SIGNAL(triggered()),this,SLOT(close())); //Quit in File menu
+
+    // ui->lineEdit_1  Name on tab personal
+    // ui->lineEdit_2  Nick on tab personal
+    // ui->lineEdit_3  Mobile on tab personal
+    // ui->lineEdit_4  Home on tab personal
+    // ui->lineEdit_5  email on tab personal
+    // ui->lineEdit_6  Website on tab personal
+    // ui->tectEdit_1  Address
 
     //Button Clear_i is present in every tab, listening to shortcut Alt+c to reset all fields in that tab
     QObject::connect(ui->Clear_1,SIGNAL(clicked()),this->ui->lineEdit_1,SLOT(clear()));
@@ -42,17 +50,25 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QObject::connect(ui->Clear_1,SIGNAL(clicked()),this->ui->textEdit_1,SLOT(clear()));
 
+    // tab introspection
+    // textEdit_2 = Hobbies, textEdit_3 = love,god,romance, textEdit_4 = Memorable day, textEdit_5 = dark secret
+    // ui->Clear_2 is a hidden button responding to Alt+c
     QObject::connect(ui->Clear_2,SIGNAL(clicked()),this->ui->textEdit_2,SLOT(clear()));
     QObject::connect(ui->Clear_2,SIGNAL(clicked()),this->ui->textEdit_3,SLOT(clear()));
     QObject::connect(ui->Clear_2,SIGNAL(clicked()),this->ui->textEdit_4,SLOT(clear()));
     QObject::connect(ui->Clear_2,SIGNAL(clicked()),this->ui->textEdit_5,SLOT(clear()));
 
+    // tab Activities
+    // textEdit_6 = Movies, textEdit_7 = Song,god,romance, textEdit_8 = Books, textEdit_9 = delicasies
+    // ui->Clear_3 is a hidden button responding to Alt+c
     QObject::connect(ui->Clear_3,SIGNAL(clicked()),this->ui->textEdit_6,SLOT(clear()));
     QObject::connect(ui->Clear_3,SIGNAL(clicked()),this->ui->textEdit_7,SLOT(clear()));
     QObject::connect(ui->Clear_3,SIGNAL(clicked()),this->ui->textEdit_8,SLOT(clear()));
     QObject::connect(ui->Clear_3,SIGNAL(clicked()),this->ui->textEdit_9,SLOT(clear()));
 
-    QObject::connect(ui->Clear_4,SIGNAL(clicked()),this->ui->textEdit_10,SLOT(clear()));
+    // tab About me
+    // textEdit_10 = abt me, textEdit_11 = memorable moments, textEdit_12 = hated for, textEdit_13 = dark secret
+    // ui->Clear_2 is a hidden button responding to Alt+cQObject::connect(ui->Clear_4,SIGNAL(clicked()),this->ui->textEdit_10,SLOT(clear()));
     QObject::connect(ui->Clear_4,SIGNAL(clicked()),this->ui->textEdit_11,SLOT(clear()));
     QObject::connect(ui->Clear_4,SIGNAL(clicked()),this->ui->textEdit_12,SLOT(clear()));
     QObject::connect(ui->Clear_4,SIGNAL(clicked()),this->ui->textEdit_13,SLOT(clear()));
@@ -61,7 +77,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(ui->Clear_5,SIGNAL(clicked()),ui->pushButton_4,SLOT(click()));
 
 
-    //pushButton_2 is connects to above Clear_i buttons
+    //pushButton_2 is connects to above Clear_i buttons of every tab
     QObject::connect(ui->pushButton_2,SIGNAL(clicked()),this->ui->Clear_1,SLOT(click()));
     QObject::connect(ui->pushButton_2,SIGNAL(clicked()),this->ui->Clear_2,SLOT(click()));
     QObject::connect(ui->pushButton_2,SIGNAL(clicked()),this->ui->Clear_3,SLOT(click()));
