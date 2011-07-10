@@ -119,9 +119,32 @@ void MainWindow::Accept()
     QString *trMiddle = new QString("</i></td><td>");
     QString *trClose = new QString("</td></tr>");
 
+    string lineEdit_1 = ui->lineEdit_1->text().toStdString();
+    string lineEdit_2 = ui->lineEdit_2->text().toStdString();
+    string lineEdit_3 = ui->lineEdit_3->text().toStdString();
+    string lineEdit_4 = ui->lineEdit_4->text().toStdString();
+    string lineEdit_5 = ui->lineEdit_5->text().toStdString();
+    string lineEdit_6 = ui->lineEdit_6->text().toStdString();
+    string lineEdit_7 = ui->lineEdit_7->text().toStdString();
+
+    string textEdit_1 = ui->textEdit_1->toPlainText().toStdString();
+    string textEdit_2 = ui->textEdit_2->toPlainText().toStdString();
+    string textEdit_3 = ui->textEdit_3->toPlainText().toStdString();
+    string textEdit_4 = ui->textEdit_4->toPlainText().toStdString();
+    string textEdit_5 = ui->textEdit_5->toPlainText().toStdString();
+    string textEdit_6 = ui->textEdit_6->toPlainText().toStdString();
+    string textEdit_7 = ui->textEdit_7->toPlainText().toStdString();
+    string textEdit_8 = ui->textEdit_8->toPlainText().toStdString();
+    string textEdit_9 = ui->textEdit_9->toPlainText().toStdString();
+    string textEdit_10 = ui->textEdit_10->toPlainText().toStdString();
+    string textEdit_11 = ui->textEdit_11->toPlainText().toStdString();
+    string textEdit_12 = ui->textEdit_12->toPlainText().toStdString();
+    string textEdit_13 = ui->textEdit_13->toPlainText().toStdString();
+
+
     QString *Header = new QString("<!DOCTYPE html><br><html><head><title>");
     file1<<Header->toStdString();
-    file1<<ui->lineEdit_1->text().toStdString();
+    file1<<lineEdit_1;
     QString *Title = new QString(" : Slam Book</title></head><body style=\"margin-top:40px;\"><center>");
     file1<<Title->toStdString();
 
@@ -134,7 +157,7 @@ void MainWindow::Accept()
 
     QString *tryImage = new QString("<img src=\"");
     file1<<tryImage->toStdString();
-    file1<<ui->lineEdit_7->text().toStdString();
+    file1<<lineEdit_7;
 
     tryImage = new QString("\"alt=\"");
     file1<<tryImage->toStdString();
@@ -149,8 +172,7 @@ void MainWindow::Accept()
     file1<<tableInit->toStdString();
 
     TRB;
-    QString *Sex = new QString("Sex");
-    file1<<Sex->toStdString();
+    file1<<ui->labelSex->text().toStdString();
     TRM;
     file1<<ui->comboBoxSex->currentText().toStdString();
     TRE;
@@ -160,139 +182,140 @@ void MainWindow::Accept()
     file1<<date->toStdString();
     TRM
     file1<<ui->dateTimeEdit->date().toString("MMMM dd yyyy").toStdString();
-    TRE
+    TRE;
+    delete(date);
 
     TRB;
-    QString *Nick = new QString("Nick");
-    file1<<Nick->toStdString();
+    file1<<ui->labelNick->text().toStdString();
     TRM;
-    file1<<ui->lineEdit_2->text().toStdString();
+    file1<<lineEdit_2;
     TRE;
 
     TRB;
-    QString *Mobile = new QString("Mobile");
-    file1<<Mobile->toStdString();
+    file1<<ui->labelMobile->text().toStdString();
     TRM;
-    file1<<ui->lineEdit_3->text().toStdString();
+    file1<<lineEdit_3;
     TRE;
 
     TRB;
-    QString *Home = new QString("Home");
-    file1<<Home->toStdString();
+    file1<<ui->labelHome->text().toStdString();
     TRM;
-    file1<<ui->lineEdit_4->text().toStdString();
+    file1<<lineEdit_4;
     TRE;
 
     TRB;
-    QString *email = new QString("email");
-    file1<<email->toStdString();
+    file1<<ui->labelemail->text().toStdString();
     TRM;
-    file1<<ui->lineEdit_5->text().toStdString();
+    file1<<lineEdit_5;
     TRE;
 
     TRB;
-    QString *Website = new QString("Website");
-    file1<<Website->toStdString();
+    file1<<ui->labelWebsite->text().toStdString();
     TRM;
-    file1<<ui->lineEdit_6->text().toStdString();
+    file1<<lineEdit_6;
     TRE;
 
     TRB;
-    QString *About = new QString("Address");
+    QString *About = new QString("Can be reached at");
     file1<<About->toStdString();
     TRM;
-    file1<<ui->textEdit_1->toPlainText().toStdString();
+    file1<<textEdit_1;
+    TRE;
+    delete (About);
+
+    TRB;
+    file1<<ui->labelHobby->text().toStdString();
+    TRM;
+    file1<<textEdit_2;
     TRE;
 
     TRB;
-    QString *crazyAbout = new QString("Crazy About");
-    file1<<crazyAbout->toStdString();
+    file1<<ui->labelLoveGod->text().toStdString();
     TRM;
-    file1<<ui->textEdit_2->toPlainText().toStdString();
+    file1<<textEdit_3;
     TRE;
 
     TRB;
-    QString *Love = new QString("Love, Romance, God");
-    file1<<Love->toStdString();
+    file1<<ui->labelUnforgettable->text().toStdString();
     TRM;
-    file1<<ui->textEdit_3->toPlainText().toStdString();
-    TRE;
-
-    TRB;
-    QString *Unforgettabele = new QString("Unforgettable Days");
-    file1<<Unforgettabele->toStdString();
-    TRM;
-    file1<<ui->textEdit_4->toPlainText().toStdString();
+    file1<<textEdit_4;
     TRE;
 
     TRB;
     QString *Hate = new QString("Dark Secret");
     file1<<Hate->toStdString();
     TRM;
-    file1<<ui->textEdit_5->toPlainText().toStdString();
+    file1<<textEdit_5;
     TRE;
 
     TRB;
-    QString *Movies = new QString("Favourite Movies");
-    file1<<Movies->toStdString();
+    file1<<ui->labelMovie->text().toStdString();
     TRM;
-    file1<<ui->textEdit_6->toPlainText().toStdString();
+    file1<<textEdit_6;
     TRE;
 
     TRB;
-    QString *Songs = new QString("Favourite Music");
-    file1<<Songs->toStdString();
+    file1<<ui->labelSong->text().toStdString();
     TRM;
-    file1<<ui->textEdit_7->toPlainText().toStdString();
+    file1<<textEdit_7;
     TRE;
 
     TRB;
     QString *Books = new QString("Best Books");
     file1<<Books->toStdString();
     TRM;
-    file1<<ui->textEdit_8->toPlainText().toStdString();
+    file1<<textEdit_8;
     TRE;
+    delete (Books);
 
     TRB;
     QString *Hobbies = new QString("Favourite delicacies");
     file1<<Hobbies->toStdString();
     TRM;
-    file1<<ui->textEdit_9->toPlainText().toStdString();
+    file1<<textEdit_9;
     TRE;
+    delete (Hobbies);
 
     TRB;
-    QString *iAm = new QString("I am for ");
+    QString *iAm = new QString("For ");
     file1<<iAm->toStdString();
-    file1<<ui->lineEdit_1->text().toStdString();
+    file1<<lineEdit_1;
+    iAm = new QString(" I am");
+    file1<<iAm;
     TRM;
     file1<<ui->textEdit_10->toPlainText().toStdString();
     TRE;
+    delete (iAm);
 
     TRB;
     QString *Moments = new QString("Most memorable moments");
     file1<<Moments->toStdString();
     TRM;
-    file1<<ui->textEdit_11->toPlainText().toStdString();
+    file1<<textEdit_11;
     TRE;
+    delete (Moments);
 
     TRB;
     QString *hateMe = new QString("I am awful for");
     file1<<hateMe->toStdString();
     TRM;
-    file1<<ui->textEdit_12->toPlainText().toStdString();
+    file1<<textEdit_12;
     TRE;
+    delete (hateMe);
 
     TRB;
-    QString *forMe = new QString("Something for me");
+    QString *forMe = new QString("bla bla");
     file1<<forMe->toStdString();
     TRM;
-    file1<<ui->textEdit_13->toPlainText().toStdString();
+    file1<<textEdit_13;
     TRE;
+    delete (forMe);
 
     QString *Footer = new QString("</center></table> <br> <br><br><center style=\"font-size:smaller;\">Generated by Slam Book. Copyright <a href=\"http://decapsulatingabstraction.blogspot.com/search/label/slamBook\"target=\"_blank\">Saurabh Araiyer</a>, 2011<br>Disrtibuted under GNU GPLv3+</center><br><br></body></html>");
     file1<<Footer->toStdString();
     file1.close();
 }
+
 
 
 MainWindow::~MainWindow()

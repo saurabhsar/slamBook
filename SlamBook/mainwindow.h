@@ -24,13 +24,19 @@
 #define MAINWINDOW_H
 
 #include <QGraphicsPixmapItem>
+#include <QtSql/QSqlDatabase>
+#include <QtSql/QSqlDriver>
+#include <QApplication>
 #include <QMainWindow>
+#include <QtSql/QtSql>
 #include <QDateTime>
 #include <iostream>
 #include <fstream>
-#include <string>
 #include <cstring>
 #include <QPixmap>
+#include <string>
+#include <QWidget>
+#include <QDir>
 
 #define TRB file1<<trBegin->toStdString();
 #define TRM file1<<trMiddle->toStdString();
@@ -60,6 +66,7 @@ signals:
 
 private:
     Ui::MainWindow *ui;
+
 };
 
 #endif // MAINWINDOW_H
