@@ -23,25 +23,23 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "backenddb.h"
+
 #include <QGraphicsPixmapItem>
-#include <QtSql/QSqlDatabase>
-#include <QtSql/QSqlDriver>
 #include <QApplication>
 #include <QMainWindow>
-#include <QtSql/QtSql>
 #include <QDateTime>
+#include <QVariant>
 #include <iostream>
 #include <fstream>
 #include <cstring>
 #include <QPixmap>
-#include <string>
 #include <QWidget>
-#include <QDir>
+#include <string>
 
 #define TRB file1<<trBegin->toStdString();
 #define TRM file1<<trMiddle->toStdString();
 #define TRE file1<<trClose->toStdString();
-
 
 
 using namespace std;
@@ -57,6 +55,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+//    DatabaseManager databaseObject;
 
 public slots:
     void Accept();
@@ -66,7 +65,10 @@ signals:
 
 private:
     Ui::MainWindow *ui;
+    DatabaseManager db1;
+
 
 };
+
 
 #endif // MAINWINDOW_H

@@ -27,7 +27,6 @@
 
 
 QT       += core gui
-QT       += sql
 
 TARGET = SlamBook
 TEMPLATE = app
